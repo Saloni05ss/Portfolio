@@ -8,6 +8,7 @@ import { SkillPage2 } from "./pages/SkillPage2";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
+import { EducationPage } from "./pages/EducationPage";
 
 export default function App() {
   const [page, setPage] = useState(0);
@@ -17,7 +18,7 @@ export default function App() {
   const [key, setKey] = useState(0);
   const [isFlipping, setIsFlipping] = useState(false);
   const bookRef = React.useRef();
-  const totalPages = 8;
+  const totalPages = 10;
 
   useEffect(() => {
     setIsClient(true);
@@ -161,7 +162,13 @@ export default function App() {
             <ProjectsPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <ContactPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <EducationPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+          </div>
+           <div className="page" style={{ height: '100%' }}>
+            <CoverPage2 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+          </div>
+           <div className="page" style={{ height: '100%' }}>
+            <CoverPage2 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
         </HTMLFlipBook>
       </div>

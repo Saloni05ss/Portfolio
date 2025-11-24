@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PageNavigation } from "./PageNavigation";
+import { PageNavigation } from "../components/PageNavigation";
 
 export const AboutPage = React.forwardRef(({ onNext, onPrev, page, totalPages }, ref) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -114,7 +114,7 @@ export const AboutPage = React.forwardRef(({ onNext, onPrev, page, totalPages },
             <p className={`text-slate-700 leading-relaxed font-light ${
               isMobile 
                 ? 'text-sm xs:text-base sm:text-md' 
-                : 'text-sm lg:text-lg'
+                : 'text-sm lg:text-md'
             }`}>
               I'm a <span className="font-medium text-teal-700">Full Stack Software Engineer</span> specializing in the{" "}
               <span className="font-medium text-slate-900">MERN stack</span>,{" "}
@@ -125,7 +125,7 @@ export const AboutPage = React.forwardRef(({ onNext, onPrev, page, totalPages },
             <p className={`text-slate-700 leading-relaxed font-light ${
               isMobile 
                 ? 'text-sm xs:text-base sm:text-lg' 
-                : 'text-sm lg:text-lg'
+                : 'text-sm lg:text-md'
             }`}>
               I create immersive web and VR experiences with{" "}
               <span className="font-medium text-slate-900">Three.js</span>,{" "}
@@ -136,7 +136,7 @@ export const AboutPage = React.forwardRef(({ onNext, onPrev, page, totalPages },
             <p className={`text-slate-700 leading-relaxed font-light ${
               isMobile 
                 ? 'text-sm xs:text-base sm:text-lg' 
-                : 'text-sm lg:text-lg'
+                : 'text-sm lg:text-md'
             }`}>
               Skilled in backend APIs, database design, and VR development using{" "}
               <span className="font-medium text-slate-900">Blender</span> and{" "}

@@ -1,6 +1,6 @@
 // ContactPage.jsx
 import React from "react";
-import { PageNavigation } from "./PageNavigation";
+import { PageNavigation } from "../components/PageNavigation";
 
 export const ContactPage = React.forwardRef(({ onNext, onPrev, page, totalPages }, ref) => {
   return (

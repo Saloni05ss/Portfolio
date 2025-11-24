@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PageNavigation } from "./PageNavigation";
+import { PageNavigation } from "../components/PageNavigation";
 
 export const SkillPage = React.forwardRef(({ onNext, onPrev, page, totalPages }, ref) => {
   const [isVisible, setIsVisible] = useState(false);

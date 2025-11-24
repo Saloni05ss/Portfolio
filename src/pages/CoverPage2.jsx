@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { PageNavigation } from "./PageNavigation";
+import { PageNavigation } from "../components/PageNavigation";
 import { Mail, Phone, Linkedin, Github } from "lucide-react";
 
 export const CoverPage2 = React.forwardRef(({ onNext, onPrev, page, totalPages }, ref) => {
