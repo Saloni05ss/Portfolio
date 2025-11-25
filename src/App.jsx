@@ -7,8 +7,8 @@ import { SkillPage } from "./pages/SkillPage";
 import { SkillPage2 } from "./pages/SkillPage2";
 import { ExperiencePage } from "./pages/ExperiencePage";
 import { ProjectsPage } from "./pages/ProjectsPage";
-import { ContactPage } from "./pages/ContactPage";
 import { EducationPage } from "./pages/EducationPage";
+import { CoverPage3 } from "./pages/CoverPage3";
 
 export default function App() {
   const [page, setPage] = useState(0);
@@ -84,6 +84,13 @@ export default function App() {
     }
   };
 
+  const goToFirstPage = () => {
+    if (page > 0 && !isFlipping) {
+      setIsFlipping(true);
+      bookRef.current?.pageFlip()?.flip(0);
+    }
+  };
+
   const handleFlip = (e) => {
     setPage(e.data);
     setIsFlipping(false);
@@ -141,34 +148,34 @@ export default function App() {
           clickEventForward={true} // Allow clicks to pass through
         >
           <div className="page" style={{ height: '100%' }}>
-            <CoverPage1 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <CoverPage1 onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <CoverPage2 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <CoverPage2 onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <AboutPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <AboutPage onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <SkillPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <SkillPage onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <SkillPage2 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <SkillPage2 onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <ExperiencePage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <ExperiencePage onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <ProjectsPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <ProjectsPage onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
           <div className="page" style={{ height: '100%' }}>
-            <EducationPage onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <EducationPage onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
            <div className="page" style={{ height: '100%' }}>
-            <CoverPage2 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <CoverPage2 onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
            <div className="page" style={{ height: '100%' }}>
-            <CoverPage2 onNext={nextPage} onPrev={prevPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
+            <CoverPage3 onNext={nextPage} onPrev={prevPage} onHome={goToFirstPage} page={page} totalPages={totalPages} isFlipping={isFlipping} />
           </div>
         </HTMLFlipBook>
       </div>

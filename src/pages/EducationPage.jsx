@@ -170,7 +170,7 @@ export const EducationPage = React.forwardRef(({ onNext, onPrev, page, totalPage
             {education.map((edu, index) => (
               <div 
                 key={index}
-                className="timeline-item mb-2 animate-slide-in-left"
+                className="timeline-item mb-2  animate-slide-in-left"
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 {/* Degree and Institution */}
@@ -183,7 +183,7 @@ export const EducationPage = React.forwardRef(({ onNext, onPrev, page, totalPage
                   <p className={`font-semibold text-slate-700 mt-1 text-xs lg:text-sm`}>
                     {edu.institution}
                   </p>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-row lg:flex-col  justify-between lg:justify-start items-center lg:items-start">
                   {edu.details && (
                     <p className={`text-slate-600 font-medium mt-1 text-xs lg:text-sm`}>
                       {edu.details}
